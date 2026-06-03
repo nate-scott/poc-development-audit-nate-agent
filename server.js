@@ -17,6 +17,7 @@ mongoose
   .catch((error) => console.log("Detailed Connection Error:", error));
 
 const app = express();
+app.use(express.json());
 const PORT = process.env.PORT || 3750;
 
 //Routes

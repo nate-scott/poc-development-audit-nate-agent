@@ -4,7 +4,7 @@ const MovieSchema = mongoose.Schema({
     title: String,
     releaseYear: Number,
     characters: [{
-        _id: false,
+        _id: mongoose.Schema.Types.ObjectId,
         name: String,
         race: String,
     }]
@@ -14,5 +14,5 @@ MovieSchema.statics.getAllMovies = function() {
     return this.find({});
 };
 
-module.exports = mongoose.model("movies", MovieSchema, "movies");
+module.exports = mongoose.model("movies", MovieSchema, "NateScott");
 
